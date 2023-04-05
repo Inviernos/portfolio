@@ -8,7 +8,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.tsx</code> and save to reload Test commit and win around the world. This will totally work finally. Please work
+          Edit <code>src/App.tsx</code> and save to reload Test commit and win around the world. HAHAHAHAHAHA!! This will totally work finally. Please work
         </p>
         <a
           className="App-link"
