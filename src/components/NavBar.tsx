@@ -3,7 +3,10 @@ import {useEffect, useState} from "react";
 import logo from '../assets/img/logo.svg';
 import navIcon1 from '../assets/img/nav-icon1.svg';
 import navIcon2 from '../assets/img/nav-icon2.svg';
-
+import { HashLink } from 'react-router-hash-link';
+import {
+  BrowserRouter as Router
+} from "react-router-dom";
 
 function NavBar(){
 
@@ -31,6 +34,7 @@ function NavBar(){
     }
     
     return(
+      <Router>
         <Navbar expand="lg" className={scrolled ? "scrolled": ""}>
         <Container>
           <Navbar.Brand href="#home">
@@ -45,14 +49,17 @@ function NavBar(){
             </Nav>
             <span className="navbar-text">
                 <div className="social-icon">
-                    <a href="#"><img src={navIcon1} alt="" /></a>
-                    <a href="#"><img src={navIcon2} alt="" /></a>
+                    <a href="https://www.linkedin.com/in/anthony-g-233279120"><img src={navIcon1} alt="" /></a>
+                    <a href="https://github.com/Inviernos?tab=repositories"><img src={navIcon2} alt="" /></a>
                 </div>
-                <button className="vvd" onClick={() => console.log('connect')}><span>Let's Connect</span></button>
+                <HashLink to='#connect'>
+                <button className="vvd"><span>Let’s Connect</span></button>
+              </HashLink>
             </span>
           </Navbar.Collapse>
         </Container>
       </Navbar>
+      </Router>
     )
 }
 

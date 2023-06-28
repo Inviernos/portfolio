@@ -29,7 +29,7 @@ function Skills()
       };
 
     return(
-        <section className="skill" id="skill">
+        <section className="skill" id="skills">
             <Container>
                 <Row>
                     <Col>
@@ -37,7 +37,7 @@ function Skills()
                             <h2>
                                 Skills
                             </h2>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. <br></br> Lorem Ipsum has been the industry's standard dummy text</p>
+                            <p>These are some of the skills that i accumulated with my time at Infosys. <br></br> I use my time to learn as many skills as i can to broaden my horizons </p>
                             <Carousel responsive={responsive} infinite={true} className="skill-slider">
                                 <div className="item">
                                     <img src={meter90} alt="Image" />
