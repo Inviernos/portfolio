@@ -1,5 +1,5 @@
 import { HashLink } from 'react-router-hash-link';
-import { Navbar , Container, Nav , Col} from "react-bootstrap";
+import {Col} from "react-bootstrap";
 
 function PowerBIPage(){
 
