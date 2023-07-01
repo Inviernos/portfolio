@@ -4,7 +4,7 @@ import "react-multi-carousel/lib/styles.css";
 import meter80 from '../assets/img/meter80.svg';
 import meter85 from '../assets/img/meter85.svg';
 import meter90 from '../assets/img/meter90.svg';
-import colorSharp from '../assets/img/color-sharp.png';
+
 
 function Skills()
 {

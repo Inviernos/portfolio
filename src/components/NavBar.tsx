@@ -1,12 +1,10 @@
-import { Navbar , Container, Nav, NavDropdown} from "react-bootstrap";
+import { Navbar , Container, Nav} from "react-bootstrap";
 import {useEffect, useState} from "react";
 import logo from '../assets/img/logo.svg';
 import navIcon1 from '../assets/img/nav-icon1.svg';
 import navIcon2 from '../assets/img/nav-icon2.svg';
 import { HashLink } from 'react-router-hash-link';
-import {
-  BrowserRouter as Router
-} from "react-router-dom";
+
 
 function NavBar(){
 
@@ -34,7 +32,7 @@ function NavBar(){
     }
     
     return(
-      <Router>
+      
         <Navbar expand="lg" className={scrolled ? "scrolled": ""}>
         <Container>
           <Navbar.Brand href="#home">
@@ -59,7 +57,6 @@ function NavBar(){
           </Navbar.Collapse>
         </Container>
       </Navbar>
-      </Router>
     )
 }
 

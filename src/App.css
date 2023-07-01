@@ -19,6 +19,10 @@ font-face {
 
 /*Default CSS*/
 
+button:disabled{
+  color: #121212;
+}
+
 *{
    margin: 0;
    padding: 0;

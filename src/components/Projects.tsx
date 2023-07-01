@@ -5,6 +5,10 @@ import client3 from '../assets/img/client3.jpg';
 import project1 from '../assets/img/project1.png';
 import project2 from '../assets/img/project2.png';
 import project3 from '../assets/img/project3.png';
+import HRevent1 from '../assets/img/Pride_Flag.png';
+import HRevent2 from '../assets/img/christmas_tree.jpg';
+import HRevent3 from '../assets/img/bats.jpg';
+import { Link } from 'react-router-dom';
 
 function Projects()
 {
@@ -18,7 +22,7 @@ function Projects()
             "wrong. Most of the time it failed because it was using a hostname instead of an ip address. In the backend, the setup didnt have the hostname connected to the ip " + 
             "address. There would also be jobs that didnt exist. I would go in and create the job in TAC. I would attend morning meetings every day to go over my list of talend jobs. This project lasted a few months until i was laid " + 
             "off the project because of budget cuts. I had to return my client laptop back to my manager. Shortly after leaving, i would land a project with client 2.",
-            imgUrl: client3
+            imgUrl: client3,
         },
         {
             title: "Client 2: World's leading manufacturer of construction and mining equipment, diesel and natural gas engines, and locomotives.",
@@ -28,10 +32,11 @@ function Projects()
             "took excel. I held a 1 week training seminar to teach employees how to use the power bi tool but only a few people showed up for it. My manager thought it would be beneficial for them to learn the tool. I also made power bi reports as well. " +
             "I made some complex power bi reports during that time to help the offshore team work on other reports.",
             imgUrl: client1,
+            Sample: 'PowerBIDemo'
         },
         {
             title: "Client 3: industry's largest and most experienced benefits providers for health insurance",
-            description: "I was a power bi developer for 3 years working remotely making power bi reports and dashboards. " + 
+            description: "I was a power bi developer/analyst for 3 years working remotely making power bi reports and dashboards. " + 
             "I made power bi dashboard for each department that contained their power bi reports so they didnt have to keep track of all the links. The reports and dashboards were stored " +
             "on a premium workspace so the users didnt need a pro license. My day to day routine for the client was attend meetings, make power bi demos, present demo to business users, publish reports using " + 
             "the prod database, and monitoring power bi reports to make the data is refreshed. They would assign me the user stories that described what the business user wanted to have in their power bi report. " +
@@ -77,7 +82,7 @@ function Projects()
             description: "HR came to me and a group of people with a task to help make pride flags. HR handed me a bunch of small poles so that i could put the pride flag on there. It took us some time but manage to " + 
             "complete the task for a good 20 minutes. The next day, HR asked me to take those pride flags and lay them down on the table in a circular fashion on the main floor tables so that people could grab their flags when " +
             "the time came. HR took pictures of the decorated flags and then ask me to inform people to come down to the main lobby at a certain time for the pride event. We ",
-            //imgUrl: projImg1,
+            imgUrl: HRevent1 ,
         },
         {
             title: "Christmas Party",
@@ -85,7 +90,7 @@ function Projects()
             "santa on a sliegh, trees with light bulbs, etc. We would set up treat stations and games for the children that were coming to this event. I was in charge of the bean bag toss area. There was blue taped lines " + 
             "that indicated what spot you were going to be at based on your age. Based on your score, the kids would win a prize. The christmas party would start and see a lot of people show up for the event. " +
             "I joined the christmas party a little later and hanged out with my peers. It was pretty fun. ",
-            //imgUrl: projImg1,
+            imgUrl: HRevent2 ,
         },
         {
             title: "Halloween",
@@ -93,7 +98,7 @@ function Projects()
             "pumpkin contest and put it on some tables. Added some fake webs and put paper bats on the ceilings. The floor became a spooky one and  once we were done with the decoration, HR did " + 
             "their costume contest afterwards. I was with a group of friends who wore lantern shirts. We were the lantern corps and i was the orange one. We each also had our individual color ring. The orange " +
             "one is the greedy one that says he owns everything.",
-            //imgUrl: projImg1,
+            imgUrl: HRevent3,
         },
     ];
 
@@ -117,7 +122,7 @@ function Projects()
                                     </Nav.Item>
                                     <Nav.Item>
                                         <Nav.Link eventKey="third">
-                                        HR Events
+                                        Volunteer
                                         </Nav.Link>
                                     </Nav.Item>
                                 </Nav>
@@ -129,13 +134,14 @@ function Projects()
                                                 projects.map((project: any ,index : number) => {
                                                     return(index === 0 || index === 1 || index === 2 ?
                                                         
-                                                        <Accordion.Item  eventKey={index.toString()}>
+                                                        <Accordion.Item  key={index.toString()} eventKey={index.toString()}>
                                                         <Accordion.Header  > {project.title}</Accordion.Header>
                                                         <Accordion.Body >
                                                             <div className="d-flex justify-content-between" >
-                                                            <img style={{padding : "5px"}} width="200" height="200" src={project.imgUrl}/> 
+                                                            <img alt="image" style={{padding : "5px"}} width="200" height="200" src={project.imgUrl}/> 
                                                             {project.description}
                                                             </div>
+                                                            {project.Sample === 'PowerBIDemo' ? <Link style={{color:"black", fontWeight:"bold"}}to="/PowerBIDemo">Click here to interact with my Power BI Demo. </Link> : ""}
                                                         </Accordion.Body>
                                                         </Accordion.Item>
                                                         : ""
@@ -153,11 +159,11 @@ function Projects()
                                                 projects.map((project: any ,index : number) => {
                                                     return(index === 3 || index === 4 || index === 5 ?
                                                         
-                                                        <Accordion.Item eventKey={index.toString()}>
+                                                        <Accordion.Item key={index.toString()} eventKey={index.toString()}>
                                                         <Accordion.Header >{project.title}</Accordion.Header>
                                                         <Accordion.Body >
                                                             <div className="d-flex justify-content-between" >
-                                                            <img style={{padding : "5px"}} width="250" height="250" src={project.imgUrl}/> 
+                                                            <img alt="image" style={{padding : "5px"}} width="250" height="250" src={project.imgUrl}/> 
                                                             {project.description} 
                                                             </div>
                                                             <div style={{padding : "5px"}}>
@@ -175,14 +181,20 @@ function Projects()
                                     </Tab.Pane>
                                     <Tab.Pane eventKey="third">
                                         <Accordion defaultActiveKey="6" flush>
-                                            {
+                                        {
                                                 projects.map((project: any ,index : number) => {
                                                     return(index === 6 || index === 7 || index === 8 ?
                                                         
-                                                        <Accordion.Item eventKey={index.toString()}>
-                                                        <Accordion.Header>{project.title}</Accordion.Header>
+                                                        <Accordion.Item key={index.toString()} eventKey={index.toString()}>
+                                                        <Accordion.Header >{project.title}</Accordion.Header>
                                                         <Accordion.Body >
-                                                            {project.description}
+                                                            <div className="d-flex justify-content-between" >
+                                                            <img alt="image" style={{padding : "5px"}} width="250" height="250" src={project.imgUrl}/> 
+                                                            {project.description} 
+                                                            </div>
+                                                            <div style={{padding : "5px"}}>
+                                                            <a href={project.gitUrl}>Link to Project</a>
+                                                            </div>
                                                         </Accordion.Body>
                                                         </Accordion.Item>
                                                         : ""
