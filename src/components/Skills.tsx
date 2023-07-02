@@ -40,23 +40,23 @@ function Skills()
                             <p>These are some of the skills that i accumulated with my time at Infosys. <br></br> I use my time to learn as many skills as i can to broaden my horizons </p>
                             <Carousel responsive={responsive} infinite={true} className="skill-slider">
                                 <div className="item">
-                                    <img src={meter90} alt="Image" />
+                                    <img src={meter90} alt="img" />
                                     <h5>Power BI</h5>
                                 </div>
                                 <div className="item">
-                                    <img src={meter80} alt="Image" />
+                                    <img src={meter80} alt="img" />
                                     <h5>MySql</h5>
                                 </div>
                                 <div className="item">
-                                    <img src={meter85} alt="Image" />
+                                    <img src={meter85} alt="img" />
                                     <h5>Python</h5>
                                 </div>
                                 <div className="item">
-                                    <img src={meter80} alt="Image" />
+                                    <img src={meter80} alt="img" />
                                     <h5>Git</h5>
                                 </div>
                                 <div className="item">
-                                    <img src={meter85} alt="Image" />
+                                    <img src={meter85} alt="img" />
                                     <h5>Cloud Fundamentals</h5>
                                 </div>
                             </Carousel>
