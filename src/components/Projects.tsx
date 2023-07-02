@@ -138,7 +138,7 @@ function Projects()
                                                         <Accordion.Header  > {project.title}</Accordion.Header>
                                                         <Accordion.Body >
                                                             <div className="d-flex justify-content-between" >
-                                                            <img alt="image" style={{padding : "5px"}} width="200" height="200" src={project.imgUrl}/> 
+                                                            <img alt="img" style={{padding : "5px"}} width="200" height="200" src={project.imgUrl}/> 
                                                             {project.description}
                                                             </div>
                                                             {project.Sample === 'PowerBIDemo' ? <Link style={{color:"black", fontWeight:"bold"}}to="/PowerBIDemo">Click here to interact with my Power BI Demo. </Link> : ""}
@@ -163,11 +163,11 @@ function Projects()
                                                         <Accordion.Header >{project.title}</Accordion.Header>
                                                         <Accordion.Body >
                                                             <div className="d-flex justify-content-between" >
-                                                            <img alt="image" style={{padding : "5px"}} width="250" height="250" src={project.imgUrl}/> 
+                                                            <img alt="img" style={{padding : "5px"}} width="250" height="250" src={project.imgUrl}/> 
                                                             {project.description} 
                                                             </div>
                                                             <div style={{padding : "5px"}}>
-                                                            <a href={project.gitUrl}>Link to Project</a>
+                                                            <a href={project.gitUrl} style={{color:"black", fontWeight:"bold"}}>Link to Project</a>
                                                             </div>
                                                         </Accordion.Body>
                                                         </Accordion.Item>
@@ -189,11 +189,8 @@ function Projects()
                                                         <Accordion.Header >{project.title}</Accordion.Header>
                                                         <Accordion.Body >
                                                             <div className="d-flex justify-content-between" >
-                                                            <img alt="image" style={{padding : "5px"}} width="250" height="250" src={project.imgUrl}/> 
+                                                            <img alt="img" style={{padding : "5px"}} width="250" height="250" src={project.imgUrl}/> 
                                                             {project.description} 
-                                                            </div>
-                                                            <div style={{padding : "5px"}}>
-                                                            <a href={project.gitUrl}>Link to Project</a>
                                                             </div>
                                                         </Accordion.Body>
                                                         </Accordion.Item>

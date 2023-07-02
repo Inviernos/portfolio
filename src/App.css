@@ -19,6 +19,10 @@ font-face {
 
 /*Default CSS*/
 
+.App {
+  text-align: center;
+}
+
 button:disabled{
   color: #121212;
 }
